@@ -6,6 +6,12 @@
  * Time: 11:03 AM
  */
 ?>
-<div><h1>Footer</h1></div>
+
+
+<footer>
+    <p>My footer</p>
+    <?php wp_nav_menu(array('theme_location'=>'secondary'));
+    ?>
+</footer>
 
 <?php wp_footer();?>

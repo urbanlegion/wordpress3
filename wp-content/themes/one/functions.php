@@ -16,6 +16,11 @@ function one_script_enqueue(){
 }
 add_action('wp_enqueue_scripts', 'one_script_enqueue');
 
-add_theme_support('menus');
+function one_theme_setup(){
+    add_theme_support('menus');
+    register_nav_menu('primary', 'Primary Header Navigation (Erez)');
+    register_nav_menu('secondary', 'Footer Navigation (Erez)');
 
+}
+add_action('init', 'one_theme_setup');
 ?>
